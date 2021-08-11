@@ -15,16 +15,14 @@ use App\Http\Controllers\DocumentoController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('formato.crear-formato');
 });
 
 Route::prefix('formato')->group(function () {
     Route::get('crear-formato', function(){return view('formato.crear-formato');});
     Route::post('generar-formato', [DocumentoController::class,'crearDocumento']);
-    Route::get('excel', [DocumentoController::class,'excelCrear']);
 });
 
 
 //Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
