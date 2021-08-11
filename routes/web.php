@@ -18,9 +18,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::prefix('formato')->group(function () {
+    Route::get('crear-formato', function(){return view('formato.crear-formato');});
+    Route::post('generar-formato', [DocumentoController::class,'crearDocumento']);
+    Route::get('excel', [DocumentoController::class,'excelCrear']);
+});
 
 
-
-Auth::routes();
+//Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

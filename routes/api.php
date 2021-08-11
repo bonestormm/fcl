@@ -17,8 +17,3 @@ use App\Http\Controllers\DocumentoController;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::prefix('formato')->group(function () {
-    Route::get('crear-formato', function(){return view('formato.crear-formato');});
-    Route::post('generar-formato', [DocumentoController::class,'crearDocumento']);
-    Route::get('excel', [DocumentoController::class,'excelCrear']);
-});

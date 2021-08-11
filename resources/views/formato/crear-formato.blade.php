@@ -11,7 +11,7 @@
 
 
     <h1 class="text-center">Formato de control de lectura.</h1>
-    <form action="{{url('api/formato/generar-formato')}}" method="post">
+    <form action="{{url('formato/generar-formato')}}" method="post">
         @csrf
 
         <div class="py-2">

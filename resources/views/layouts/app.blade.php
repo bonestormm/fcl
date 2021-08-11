@@ -50,7 +50,7 @@
     </div>
     <footer class="footer d-flex mb-2">
         <div class="container_footer m-auto" bis_skin_checked="1">
-            <span class="text-muted center">Formato de control de lectura, encuentra el código en: <a href="https://github.com/bonestormm" target="_blank">GitHub</a></span>
+            <span class="text-muted center">Formato de control de lectura, encuentra el código en: <a href="https://github.com/bonestormm/fcl" target="_blank">GitHub</a></span>
         </div>
     </footer>
 </body>
