@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 Route::prefix('formato')->group(function () {
-    Route::get('crear-formato', function(){return view('formato.crear-formato');});
+    Route::get('crear-formato', function(){return view('formato.crear-formato');})->name('crear');
     Route::post('generar-formato', [DocumentoController::class,'crearDocumento']);
 });
 

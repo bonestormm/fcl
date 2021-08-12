@@ -66,9 +66,13 @@ class DocumentoController extends Controller
         $validador = Validator::make($datos, $reglas);
 
         if (!$validador->fails()) {
+
             $this->generarPdf($datos);
         } else {
-            echo "Rellena todos los campos de forma correcta en caso de ser requeridos.";
+
+            return redirect()->back()->withInput()->with(array(
+                'message' => 'Rellena todos los campos de forma correcta en caso de ser requeridos (*).'
+            ));
         }
     }
 
